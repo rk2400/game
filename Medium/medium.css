@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	/* border: 1px solid black; */
+	height: 100vh;
+}
+
+.grid {
+	width: 300px;
+	height: 300px;
+	border: solid black 1px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.grid div {
+	width: 20px;
+	height: 20px;
+}
+
+.invader {
+	background-color: purple;
+	/* background-image: url("https://media.giphy.com/media/Z9WQLSrsQKH3uBbiXq/giphy-downsized.gif"); */
+	border-radius: 10px;
+}
+
+.shooter {
+	background-color: green;
+}
+
+.laser {
+	background-color: orange;
+}
+
+.boom {
+	background-color: red;
+}
