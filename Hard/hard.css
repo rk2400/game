@@ -7,14 +7,21 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	/* border: 1px solid black; */
 	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../Resources/hard_bg.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 .grid {
-	width: 300px;
-	height: 300px;
-	border: solid black 1px;
+	width: 500px;
+	background-color: black;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../Resources/hard_sbg.jpeg);
+	background-size: cover;
+	background-position: center;
+	height: 500px;
+	/* border: solid black 1px; */
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -25,19 +32,25 @@
 }
 
 .invader {
-	background-color: purple;
-	/* background-image: url("https://media.giphy.com/media/Z9WQLSrsQKH3uBbiXq/giphy-downsized.gif"); */
+	/* background-color: purple; */
+	background-image: url(../Resources/hard_alien.gif);
 	border-radius: 10px;
 }
 
 .shooter {
-	background-color: green;
+	/* background-color: green; */
+	background-image: url(../Resources/hard_spaceship.gif);
 }
 
 .laser {
-	background-color: orange;
+	/* background-color: orange; */
+	background-image: url(../Resources/hard_missile.gif);
 }
 
 .boom {
-	background-color: red;
+	background-image: url(../Resources/hard_explode.gif);
+}
+
+.results{
+	color: white;
 }

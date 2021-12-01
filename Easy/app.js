@@ -80,22 +80,36 @@ function moveInvaders() {
 
   draw()
 
+  
   if (squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
-    resultsDisplay.innerHTML = 'GAME OVER'
+    resultsDisplay.innerHTML = 'GAME OVER';
     clearInterval(invadersId)
+    finish('lost');
   }
-
+  
   for (let i = 0; i < alienInvaders.length; i++) {
     if(alienInvaders[i] > (squares.length)) {
       resultsDisplay.innerHTML = 'GAME OVER'
       clearInterval(invadersId)
+      finish('lost');
     }
   }
   if (aliensRemoved.length === alienInvaders.length) {
     resultsDisplay.innerHTML = 'YOU WIN'
     clearInterval(invadersId)
+    finish('won');
   }
 }
+
+function finish(status){
+  if(status === 'lost'){
+    alert('loser')    
+  }
+  else{
+    alert('winner');
+  }
+}
+
 invadersId = setInterval(moveInvaders, 600)
 
 function shoot(e) {

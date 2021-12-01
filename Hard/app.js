@@ -1,14 +1,14 @@
 const grid = document.querySelector('.grid')
 const resultsDisplay = document.querySelector('.results')
-let currentShooterIndex = 202
-let width = 15
+let currentShooterIndex = 562
+let width = 25
 let direction = 1
 let invadersId
 let goingRight = true
 let aliensRemoved = []
 let results = 0
 
-for (let i = 0; i < 225; i++) {
+for (let i = 0; i < 625; i++) {
   const square = document.createElement('div')
   grid.appendChild(square)
 }
@@ -16,9 +16,9 @@ for (let i = 0; i < 225; i++) {
 const squares = Array.from(document.querySelectorAll('.grid div'))
 
 const alienInvaders = [
-  0,1,2,3,4,5,6,7,8,9,
-  15,16,17,18,19,20,21,22,23,24,
-  30,31,32,33,34,35,36,37,38,39
+  0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,
+  25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,
+  50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69
 ]
 
 function draw() {
@@ -96,7 +96,7 @@ function moveInvaders() {
     clearInterval(invadersId)
   }
 }
-invadersId = setInterval(moveInvaders, 600)
+invadersId = setInterval(moveInvaders, 550)
 
 function shoot(e) {
   let laserId
@@ -117,7 +117,7 @@ function shoot(e) {
       const alienRemoved = alienInvaders.indexOf(currentLaserIndex)
       aliensRemoved.push(alienRemoved)
       results++
-      resultsDisplay.innerHTML = results
+      resultsDisplay.innerHTML = 'Score: '+ results
       console.log(aliensRemoved)
 
     }
