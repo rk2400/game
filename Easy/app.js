@@ -1,3 +1,28 @@
+localStorage.setItem("storage",'1');
+var audio=document.getElementById('aud');
+var btn=document.getElementById('song');
+var count=0;
+function play()
+{
+  if(count==0)
+  {
+    count=1;
+    audio.play();
+    btn.innerHTML='🔊';
+  }
+  else
+  {
+    count=0;
+    audio.pause();
+    btn.innerHTML='🔈';
+  }
+}
+
+function back(){
+  document.getElementById("back").href="../Menu/index.html"; 
+  return false;
+}
+
 const grid = document.querySelector('.grid')
 const resultsDisplay = document.querySelector('.results')
 let currentShooterIndex = 202
@@ -82,20 +107,20 @@ function moveInvaders() {
 
   
   if (squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
-    resultsDisplay.innerHTML = 'GAME OVER';
+    // resultsDisplay.innerHTML = 'GAME OVER';
     clearInterval(invadersId)
     finish('lost');
   }
   
   for (let i = 0; i < alienInvaders.length; i++) {
     if(alienInvaders[i] > (squares.length)) {
-      resultsDisplay.innerHTML = 'GAME OVER'
+      // resultsDisplay.innerHTML = 'GAME OVER'
       clearInterval(invadersId)
       finish('lost');
     }
   }
   if (aliensRemoved.length === alienInvaders.length) {
-    resultsDisplay.innerHTML = 'YOU WIN'
+    // resultsDisplay.innerHTML = 'YOU WIN'
     clearInterval(invadersId)
     finish('won');
   }
@@ -103,10 +128,16 @@ function moveInvaders() {
 
 function finish(status){
   if(status === 'lost'){
-    alert('loser')    
+    alert('Game Over. Click OK to see results')
+    localStorage.setItem("storage1",results);  
+    localStorage.setItem("storage2",status);  
+    location.replace("../Game Over/menu.html");
   }
   else{
-    alert('winner');
+    alert('Game Over. Click OK to see results')
+    localStorage.setItem("storage1",results);    
+    localStorage.setItem("storage2",status);    
+    location.replace("../Game Over/menu.html");
   }
 }
 
