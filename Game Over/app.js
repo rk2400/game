@@ -14,12 +14,12 @@ else{
 
 function redirect(){
     if(mode==='1'){
-        document.getElementById("page").href="/Easy/easy.html"; 
+        document.getElementById("page").href="../Easy/easy.html"; 
     }
     else if(mode==='2'){
-        document.getElementById("page").href="/Medium/medium.html"; 
+        document.getElementById("page").href="../Medium/medium.html"; 
     }
     else if(mode==='3'){
-        document.getElementById("page").href="/Hard/hard.html"; 
+        document.getElementById("page").href="../Hard/hard.html"; 
     }
 }
